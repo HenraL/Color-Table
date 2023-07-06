@@ -1,431 +1,109 @@
-var val;
-var vall;
-var colChoice;
-var semiiChoice;
-function col(){
-  vaal=document.getElementById('baliseColor').value;
-  if (vaal=="nothing"){
-    colChoice="";
+var err = 84,
+  success = 0;
+function col() {
+  var colourValue = document.getElementById('baliseColor').value;
+  var columnChoice = "";
+  var blocks = [
+    "baliseColorFin", "baliseColorFin2", "baliseColorFin3", "baliseColorFin4", "baliseColorFin5", "baliseColorFin6", "baliseColorFin7", "baliseColorFin8",
+    "baliseColorFin9", "baliseColorFin10", "baliseColorFin11", "baliseColorFin12", "baliseColorFin13", "baliseColorFin14", "baliseColorFin15", "baliseColorFin16",
+    "baliseColorFin17", "baliseColorFin18", "baliseColorFin19", "baliseColorFin20", "baliseColorFin21", "baliseColorFin22", "baliseColorFin23", "baliseColorFin24",
+    "baliseColorFin25", "baliseColorFin26", "baliseColorFin27", "baliseColorFin28", "baliseColorFin29", "baliseColorFin30", "baliseColorFin31", "baliseColorFin32",
+    "baliseColorFin33", "baliseColorFin34", "baliseColorFin35", "baliseColorFin36", "baliseColorFin37", "baliseColorFin38", "baliseColorFin39", "baliseColorFin40",
+    "baliseColorFin41", "baliseColorFin42", "baliseColorFin43", "baliseColorFin44", "baliseColorFin45", "baliseColorFin46", "baliseColorFin47", "baliseColorFin48",
+    "baliseColorFin49", "baliseColorFin50", "baliseColorFin51", "baliseColorFin52", "baliseColorFin53", "baliseColorFin54", "baliseColorFin55", "baliseColorFin56",
+    "baliseColorFin57", "baliseColorFin58", "baliseColorFin59", "baliseColorFin60", "baliseColorFin61", "baliseColorFin62", "baliseColorFin63", "baliseColorFin64",
+    "baliseColorFin65", "baliseColorFin66", "baliseColorFin67", "baliseColorFin68", "baliseColorFin69", "baliseColorFin70", "baliseColorFin71", "baliseColorFin72",
+    "baliseColorFin73", "baliseColorFin74", "baliseColorFin75", "baliseColorFin76", "baliseColorFin77", "baliseColorFin78", "baliseColorFin79", "baliseColorFin80",
+    "baliseColorFin81", "baliseColorFin82", "baliseColorFin83", "baliseColorFin84", "baliseColorFin85", "baliseColorFin86", "baliseColorFin87", "baliseColorFin88",
+    "baliseColorFin89", "baliseColorFin90", "baliseColorFin91", "baliseColorFin92", "baliseColorFin93", "baliseColorFin94", "baliseColorFin95", "baliseColorFin96",
+    "baliseColorFin97", "baliseColorFin98", "baliseColorFin99", "baliseColorFin100", "baliseColorFin101", "baliseColorFin102", "baliseColorFin103", "baliseColorFin104",
+    "baliseColorFin105", "baliseColorFin106", "baliseColorFin107", "baliseColorFin108", "baliseColorFin109", "baliseColorFin110", "baliseColorFin111", "baliseColorFin112",
+    "baliseColorFin113", "baliseColorFin114", "baliseColorFin115", "baliseColorFin116", "baliseColorFin117", "baliseColorFin118", "baliseColorFin119", "baliseColorFin120",
+    "baliseColorFin121", "baliseColorFin122", "baliseColorFin123", "baliseColorFin124", "baliseColorFin125", "baliseColorFin126", "baliseColorFin127", "baliseColorFin128",
+    "baliseColorFin129", "baliseColorFin130", "baliseColorFin131", "baliseColorFin132", "baliseColorFin133", "baliseColorFin134", "baliseColorFin135", "baliseColorFin136",
+    "baliseColorFin137", "baliseColorFin138", "baliseColorFin139", "baliseColorFin140", "baliseColorFin141", "baliseColorFin142", "baliseColorFin143", "baliseColorFin144",
+    "baliseColorFin145", "baliseColorFin146", "baliseColorFin147", "baliseColorFin148", "baliseColorFin149", "baliseColorFin150", "baliseColorFin151", "baliseColorFin152",
+    "baliseColorFin153"
+  ]
+  var options = {
+    "nothing": "",
+    "co": "color:",
+    "baco": "background-color:",
+    "boco": "border-color:",
+    "btco": "border-top-color:",
+    "bbco": "border-bottom-color:",
+    "brco": "border-right-color:",
+    "blco": "border-left-color:",
+    "oco": "outline-color:",
+    "tdco": "text-decoration-color:",
+    "cco": "caret-color:",
+    "crco": "column-rule-color:",
+    "stco": "stop-color:",
+    "bisco": "border-inline-start-color:",
+    "bieco": "border-inline-end-color:",
+    "bbeco": "border-block-end-color:",
+    "bbsco": "border-block-start-color:",
+    "flco": "flood-color:",
+    "lico": "lighting-color:",
+    "bico": "border-block-color:",
+    "sico": "border-inline-color:",
+    "s3co": "scrollbar-3dlight-color:",
+    "saco": "scrollbar-arrow-color:",
+    "sbco": "scrollbar-base-color:",
+    "sdco": "scrollbar-darkshadow-color:",
+    "sfco": "scrollbar-face-color:",
+    "shco": "scrollbar-highlight-color:",
+    "ssco": "scrollbar-shadow-color:",
+    "stco": "scrollbar-track-color:",
+    "scco": "scrollbar-color:",
+    "teco": "text-emphasis-color:",
+    "mcrco": "-moz-column-rule-color:",
+    "mtdco": "-moz-text-decoration-color:",
+    "wcrco": "-webkit-column-rule-color:"
   }
-  if (vaal=="co"){
-    colChoice="color:";
+  if (colourValue in options) {
+    columnChoice = options[colourValue];
+  } else {
+    return err;
   }
-  if (vaal=="baco"){
-    colChoice="background-color:";
+  console.log(columnChoice);
+  for (var i = 0; i < blocks.length; i++) {
+    document.getElementById(blocks[i]).innerHTML = columnChoice;
   }
-  if (vaal=="boco"){
-    colChoice="border-color:";
-  }
-  if (vaal=="btco"){
-    colChoice="border-top-color:";
-  }
-  if (vaal=="bbco"){
-    colChoice="border-bottom-color:";
-  }
-  if (vaal=="brco"){
-    colChoice="border-right-color:";
-  }
-  if (vaal=="blco"){
-    colChoice="border-left-color:";
-  }
-  if (vaal=="oco"){
-    colChoice="outline-color:";
-  }
-  if (vaal=="tdco"){
-    colChoice="text-decoration-color:";
-  }
-  if (vaal=="cco"){
-    colChoice="caret-color:";
-  }
-  if (vaal=="crco"){
-    colChoice="column-rule-color:";
-  }
-  if (vaal=="stco"){
-    colChoice="stop-color:";
-  }
-  if (vaal=="bisco"){
-    colChoice="border-inline-start-color:";
-  }
-  if (vaal=="bieco"){
-    colChoice="border-inline-end-color:";
-  }
-  if (vaal=="bbeco"){
-    colChoice="border-block-end-color:";
-  }
-  if (vaal=="bbsco"){
-    colChoice="border-block-start-color:";
-  }
-  if (vaal=="flco"){
-    colChoice="flood-color:";
-  }
-  if (vaal=="lico"){
-    colChoice="lighting-color:";
-  }
-  if (vaal=="bico"){
-    colChoice="border-block-color:";
-  }
-  if (vaal=="sico"){
-    colChoice="border-inline-color:";
-  }
-  if (vaal=="s3co"){
-    colChoice="scrollbar-3dlight-color:";
-  }
-  if (vaal=="saco"){
-    colChoice="scrollbar-arrow-color:";
-  }
-  if (vaal=="sbco"){
-    colChoice="scrollbar-base-color:";
-  }
-  if (vaal=="sdco"){
-    colChoice="scrollbar-darkshadow-color:";
-  }
-  if (vaal=="sfco"){
-    colChoice="scrollbar-face-color:";
-  }
-  if (vaal=="shco"){
-    colChoice="scrollbar-highlight-color:";
-  }
-  if (vaal=="ssco"){
-    colChoice="scrollbar-shadow-color:";
-  }
-  if (vaal=="stco"){
-    colChoice="scrollbar-track-color:";
-  }
-  if (vaal=="scco"){
-    colChoice="scrollbar-color:";
-  }
-  if (vaal=="teco"){
-    colChoice="text-emphasis-color:";
-  }
-  if (vaal=="mcrco"){
-    colChoice="-moz-column-rule-color:";
-  }
-  if (vaal=="mtdco"){
-    colChoice="-moz-text-decoration-color:";
-  }
-  if (vaal=="wcrco"){
-    colChoice="-webkit-column-rule-color:";
-  }
-  console.log(val);
-  console.log(colChoice);
-
-  document.getElementById("baliseColorFin").innerHTML=colChoice;
-  document.getElementById('baliseColorFin2').innerHTML=colChoice;
-  document.getElementById('baliseColorFin3').innerHTML=colChoice;
-  document.getElementById('baliseColorFin4').innerHTML=colChoice;
-  document.getElementById('baliseColorFin5').innerHTML=colChoice;
-  document.getElementById('baliseColorFin6').innerHTML=colChoice;
-  document.getElementById('baliseColorFin7').innerHTML=colChoice;
-  document.getElementById('baliseColorFin8').innerHTML=colChoice;
-  document.getElementById('baliseColorFin9').innerHTML=colChoice;
-  document.getElementById('baliseColorFin10').innerHTML=colChoice;
-  document.getElementById('baliseColorFin11').innerHTML=colChoice;
-  document.getElementById('baliseColorFin12').innerHTML=colChoice;
-  document.getElementById('baliseColorFin13').innerHTML=colChoice;
-  document.getElementById('baliseColorFin14').innerHTML=colChoice;
-  document.getElementById('baliseColorFin15').innerHTML=colChoice;
-  document.getElementById('baliseColorFin16').innerHTML=colChoice;
-  document.getElementById('baliseColorFin17').innerHTML=colChoice;
-  document.getElementById('baliseColorFin18').innerHTML=colChoice;
-  document.getElementById('baliseColorFin19').innerHTML=colChoice;
-  document.getElementById('baliseColorFin20').innerHTML=colChoice;
-  document.getElementById('baliseColorFin21').innerHTML=colChoice;
-  document.getElementById('baliseColorFin22').innerHTML=colChoice;
-  document.getElementById('baliseColorFin23').innerHTML=colChoice;
-  document.getElementById('baliseColorFin24').innerHTML=colChoice;
-  document.getElementById('baliseColorFin25').innerHTML=colChoice;
-  document.getElementById('baliseColorFin26').innerHTML=colChoice;
-  document.getElementById('baliseColorFin27').innerHTML=colChoice;
-  document.getElementById('baliseColorFin28').innerHTML=colChoice;
-  document.getElementById('baliseColorFin29').innerHTML=colChoice;
-  document.getElementById('baliseColorFin30').innerHTML=colChoice;
-  document.getElementById('baliseColorFin31').innerHTML=colChoice;
-  document.getElementById('baliseColorFin32').innerHTML=colChoice;
-  document.getElementById('baliseColorFin33').innerHTML=colChoice;
-  document.getElementById('baliseColorFin34').innerHTML=colChoice;
-  document.getElementById('baliseColorFin35').innerHTML=colChoice;
-  document.getElementById('baliseColorFin36').innerHTML=colChoice;
-  document.getElementById('baliseColorFin37').innerHTML=colChoice;
-  document.getElementById('baliseColorFin38').innerHTML=colChoice;
-  document.getElementById('baliseColorFin39').innerHTML=colChoice;
-  document.getElementById('baliseColorFin40').innerHTML=colChoice;
-  document.getElementById('baliseColorFin41').innerHTML=colChoice;
-  document.getElementById('baliseColorFin42').innerHTML=colChoice;
-  document.getElementById('baliseColorFin43').innerHTML=colChoice;
-  document.getElementById('baliseColorFin44').innerHTML=colChoice;
-  document.getElementById('baliseColorFin45').innerHTML=colChoice;
-  document.getElementById('baliseColorFin46').innerHTML=colChoice;
-  document.getElementById('baliseColorFin47').innerHTML=colChoice;
-  document.getElementById('baliseColorFin48').innerHTML=colChoice;
-  document.getElementById('baliseColorFin49').innerHTML=colChoice;
-  document.getElementById('baliseColorFin50').innerHTML=colChoice;
-  document.getElementById('baliseColorFin51').innerHTML=colChoice;
-  document.getElementById('baliseColorFin52').innerHTML=colChoice;
-  document.getElementById('baliseColorFin53').innerHTML=colChoice;
-  document.getElementById('baliseColorFin54').innerHTML=colChoice;
-  document.getElementById('baliseColorFin55').innerHTML=colChoice;
-  document.getElementById('baliseColorFin56').innerHTML=colChoice;
-  document.getElementById('baliseColorFin57').innerHTML=colChoice;
-  document.getElementById('baliseColorFin58').innerHTML=colChoice;
-  document.getElementById('baliseColorFin59').innerHTML=colChoice;
-  document.getElementById('baliseColorFin60').innerHTML=colChoice;
-  document.getElementById('baliseColorFin61').innerHTML=colChoice;
-  document.getElementById('baliseColorFin62').innerHTML=colChoice;
-  document.getElementById('baliseColorFin63').innerHTML=colChoice;
-  document.getElementById('baliseColorFin64').innerHTML=colChoice;
-  document.getElementById('baliseColorFin65').innerHTML=colChoice;
-  document.getElementById('baliseColorFin66').innerHTML=colChoice;
-  document.getElementById('baliseColorFin67').innerHTML=colChoice;
-  document.getElementById('baliseColorFin68').innerHTML=colChoice;
-  document.getElementById('baliseColorFin69').innerHTML=colChoice;
-  document.getElementById('baliseColorFin70').innerHTML=colChoice;
-  document.getElementById('baliseColorFin71').innerHTML=colChoice;
-  document.getElementById('baliseColorFin72').innerHTML=colChoice;
-  document.getElementById('baliseColorFin73').innerHTML=colChoice;
-  document.getElementById('baliseColorFin74').innerHTML=colChoice;
-  document.getElementById('baliseColorFin75').innerHTML=colChoice;
-  document.getElementById('baliseColorFin76').innerHTML=colChoice;
-  document.getElementById('baliseColorFin77').innerHTML=colChoice;
-  document.getElementById('baliseColorFin78').innerHTML=colChoice;
-  document.getElementById('baliseColorFin79').innerHTML=colChoice;
-  document.getElementById('baliseColorFin80').innerHTML=colChoice;
-  document.getElementById('baliseColorFin81').innerHTML=colChoice;
-  document.getElementById('baliseColorFin82').innerHTML=colChoice;
-  document.getElementById('baliseColorFin83').innerHTML=colChoice;
-  document.getElementById('baliseColorFin84').innerHTML=colChoice;
-  document.getElementById('baliseColorFin85').innerHTML=colChoice;
-  document.getElementById('baliseColorFin86').innerHTML=colChoice;
-  document.getElementById('baliseColorFin87').innerHTML=colChoice;
-  document.getElementById('baliseColorFin88').innerHTML=colChoice;
-  document.getElementById('baliseColorFin89').innerHTML=colChoice;
-  document.getElementById('baliseColorFin90').innerHTML=colChoice;
-  document.getElementById('baliseColorFin91').innerHTML=colChoice;
-  document.getElementById('baliseColorFin92').innerHTML=colChoice;
-  document.getElementById('baliseColorFin93').innerHTML=colChoice;
-  document.getElementById('baliseColorFin94').innerHTML=colChoice;
-  document.getElementById('baliseColorFin95').innerHTML=colChoice;
-  document.getElementById('baliseColorFin96').innerHTML=colChoice;
-  document.getElementById('baliseColorFin97').innerHTML=colChoice;
-  document.getElementById('baliseColorFin98').innerHTML=colChoice;
-  document.getElementById('baliseColorFin99').innerHTML=colChoice;
-  document.getElementById('baliseColorFin100').innerHTML=colChoice;
-  document.getElementById('baliseColorFin101').innerHTML=colChoice;
-  document.getElementById('baliseColorFin102').innerHTML=colChoice;
-  document.getElementById('baliseColorFin103').innerHTML=colChoice;
-  document.getElementById('baliseColorFin104').innerHTML=colChoice;
-  document.getElementById('baliseColorFin105').innerHTML=colChoice;
-  document.getElementById('baliseColorFin106').innerHTML=colChoice;
-  document.getElementById('baliseColorFin107').innerHTML=colChoice;
-  document.getElementById('baliseColorFin108').innerHTML=colChoice;
-  document.getElementById('baliseColorFin109').innerHTML=colChoice;
-  document.getElementById('baliseColorFin110').innerHTML=colChoice;
-  document.getElementById('baliseColorFin111').innerHTML=colChoice;
-  document.getElementById('baliseColorFin112').innerHTML=colChoice;
-  document.getElementById('baliseColorFin113').innerHTML=colChoice;
-  document.getElementById('baliseColorFin114').innerHTML=colChoice;
-  document.getElementById('baliseColorFin115').innerHTML=colChoice;
-  document.getElementById('baliseColorFin116').innerHTML=colChoice;
-  document.getElementById('baliseColorFin117').innerHTML=colChoice;
-  document.getElementById('baliseColorFin118').innerHTML=colChoice;
-  document.getElementById('baliseColorFin119').innerHTML=colChoice;
-  document.getElementById('baliseColorFin120').innerHTML=colChoice;
-  document.getElementById('baliseColorFin121').innerHTML=colChoice;
-  document.getElementById('baliseColorFin122').innerHTML=colChoice;
-  document.getElementById('baliseColorFin123').innerHTML=colChoice;
-  document.getElementById('baliseColorFin124').innerHTML=colChoice;
-  document.getElementById('baliseColorFin125').innerHTML=colChoice;
-  document.getElementById('baliseColorFin126').innerHTML=colChoice;
-  document.getElementById('baliseColorFin127').innerHTML=colChoice;
-  document.getElementById('baliseColorFin128').innerHTML=colChoice;
-  document.getElementById('baliseColorFin129').innerHTML=colChoice;
-  document.getElementById('baliseColorFin130').innerHTML=colChoice;
-  document.getElementById('baliseColorFin131').innerHTML=colChoice;
-  document.getElementById('baliseColorFin132').innerHTML=colChoice;
-  document.getElementById('baliseColorFin133').innerHTML=colChoice;
-  document.getElementById('baliseColorFin134').innerHTML=colChoice;
-  document.getElementById('baliseColorFin135').innerHTML=colChoice;
-  document.getElementById('baliseColorFin136').innerHTML=colChoice;
-  document.getElementById('baliseColorFin137').innerHTML=colChoice;
-  document.getElementById('baliseColorFin138').innerHTML=colChoice;
-  document.getElementById('baliseColorFin139').innerHTML=colChoice;
-  document.getElementById('baliseColorFin140').innerHTML=colChoice;
-  document.getElementById('baliseColorFin141').innerHTML=colChoice;
-  document.getElementById('baliseColorFin142').innerHTML=colChoice;
-  document.getElementById('baliseColorFin143').innerHTML=colChoice;
-  document.getElementById('baliseColorFin144').innerHTML=colChoice;
-  document.getElementById('baliseColorFin145').innerHTML=colChoice;
-  document.getElementById('baliseColorFin146').innerHTML=colChoice;
-  document.getElementById('baliseColorFin147').innerHTML=colChoice;
-  document.getElementById('baliseColorFin148').innerHTML=colChoice;
-  document.getElementById('baliseColorFin149').innerHTML=colChoice;
-  document.getElementById('baliseColorFin150').innerHTML=colChoice;
-  document.getElementById('baliseColorFin151').innerHTML=colChoice;
-  document.getElementById('baliseColorFin152').innerHTML=colChoice;
-  document.getElementById('baliseColorFin153').innerHTML=colChoice;
 }
-function semii(){
-  val=document.getElementById('semi').value;
-  if (val=="nothing"){
-    semiiChoice="";
-  }
-  if (val=="semi"){
-    semiiChoice=";";
+
+function semii() {
+  var val = document.getElementById('semi').value;
+  var blocks = [
+    "semiFin", "semiFin2", "semiFin3", "semiFin4", "semiFin5", "semiFin6", "semiFin7", "semiFin8",
+    "semiFin9", "semiFin10", "semiFin11", "semiFin12", "semiFin13", "semiFin14", "semiFin15", "semiFin16",
+    "semiFin17", "semiFin18", "semiFin19", "semiFin20", "semiFin21", "semiFin22", "semiFin23", "semiFin24",
+    "semiFin25", "semiFin26", "semiFin27", "semiFin28", "semiFin29", "semiFin30", "semiFin31", "semiFin32",
+    "semiFin33", "semiFin34", "semiFin35", "semiFin36", "semiFin37", "semiFin38", "semiFin39", "semiFin40",
+    "semiFin41", "semiFin42", "semiFin43", "semiFin44", "semiFin45", "semiFin46", "semiFin47", "semiFin48",
+    "semiFin49", "semiFin50", "semiFin51", "semiFin52", "semiFin53", "semiFin54", "semiFin55", "semiFin56",
+    "semiFin57", "semiFin58", "semiFin59", "semiFin60", "semiFin61", "semiFin62", "semiFin63", "semiFin64",
+    "semiFin65", "semiFin66", "semiFin67", "semiFin68", "semiFin69", "semiFin70", "semiFin71", "semiFin72",
+    "semiFin73", "semiFin74", "semiFin75", "semiFin76", "semiFin77", "semiFin78", "semiFin79", "semiFin80",
+    "semiFin81", "semiFin82", "semiFin83", "semiFin84", "semiFin85", "semiFin86", "semiFin87", "semiFin88",
+    "semiFin89", "semiFin90", "semiFin91", "semiFin92", "semiFin93", "semiFin94", "semiFin95", "semiFin96",
+    "semiFin97", "semiFin98", "semiFin99", "semiFin100", "semiFin101", "semiFin102", "semiFin103", "semiFin104",
+    "semiFin105", "semiFin106", "semiFin107", "semiFin108", "semiFin109", "semiFin110", "semiFin111", "semiFin112",
+    "semiFin113", "semiFin114", "semiFin115", "semiFin116", "semiFin117", "semiFin118", "semiFin119", "semiFin120",
+    "semiFin121", "semiFin122", "semiFin123", "semiFin124", "semiFin125", "semiFin126", "semiFin127", "semiFin128",
+    "semiFin129", "semiFin130", "semiFin131", "semiFin132", "semiFin133", "semiFin134", "semiFin135", "semiFin136",
+    "semiFin137", "semiFin138", "semiFin139", "semiFin140", "semiFin141", "semiFin142", "semiFin143", "semiFin144",
+    "semiFin145", "semiFin146", "semiFin147", "semiFin148", "semiFin149", "semiFin150", "semiFin151", "semiFin152",
+    "semiFin153", "semiFin154"
+  ]
+  var semiColonChoice = "";
+  if (val == "semi") {
+    semiColonChoice = ";";
   }
   console.log(val);
-  console.log(semiiChoice);
-  
-  document.getElementById("semiFin").innerHTML=semiiChoice;
-  document.getElementById('semiFin2').innerHTML=semiiChoice;
-  document.getElementById('semiFin3').innerHTML=semiiChoice;
-  document.getElementById('semiFin4').innerHTML=semiiChoice;
-  document.getElementById('semiFin5').innerHTML=semiiChoice;
-  document.getElementById('semiFin6').innerHTML=semiiChoice;
-  document.getElementById('semiFin7').innerHTML=semiiChoice;
-  document.getElementById('semiFin8').innerHTML=semiiChoice;
-  document.getElementById('semiFin9').innerHTML=semiiChoice;
-  document.getElementById('semiFin10').innerHTML=semiiChoice;
-  document.getElementById('semiFin11').innerHTML=semiiChoice;
-  document.getElementById('semiFin12').innerHTML=semiiChoice;
-  document.getElementById('semiFin13').innerHTML=semiiChoice;
-  document.getElementById('semiFin14').innerHTML=semiiChoice;
-  document.getElementById('semiFin15').innerHTML=semiiChoice;
-  document.getElementById('semiFin16').innerHTML=semiiChoice;
-  document.getElementById('semiFin17').innerHTML=semiiChoice;
-  document.getElementById('semiFin18').innerHTML=semiiChoice;
-  document.getElementById('semiFin19').innerHTML=semiiChoice;
-  document.getElementById('semiFin20').innerHTML=semiiChoice;
-  document.getElementById('semiFin21').innerHTML=semiiChoice;
-  document.getElementById('semiFin22').innerHTML=semiiChoice;
-  document.getElementById('semiFin23').innerHTML=semiiChoice;
-  document.getElementById('semiFin24').innerHTML=semiiChoice;
-  document.getElementById('semiFin25').innerHTML=semiiChoice;
-  document.getElementById('semiFin26').innerHTML=semiiChoice;
-  document.getElementById('semiFin27').innerHTML=semiiChoice;
-  document.getElementById('semiFin28').innerHTML=semiiChoice;
-  document.getElementById('semiFin29').innerHTML=semiiChoice;
-  document.getElementById('semiFin30').innerHTML=semiiChoice;
-  document.getElementById('semiFin31').innerHTML=semiiChoice;
-  document.getElementById('semiFin32').innerHTML=semiiChoice;
-  document.getElementById('semiFin33').innerHTML=semiiChoice;
-  document.getElementById('semiFin34').innerHTML=semiiChoice;
-  document.getElementById('semiFin35').innerHTML=semiiChoice;
-  document.getElementById('semiFin36').innerHTML=semiiChoice;
-  document.getElementById('semiFin37').innerHTML=semiiChoice;
-  document.getElementById('semiFin38').innerHTML=semiiChoice;
-  document.getElementById('semiFin39').innerHTML=semiiChoice;
-  document.getElementById('semiFin40').innerHTML=semiiChoice;
-  document.getElementById('semiFin41').innerHTML=semiiChoice;
-  document.getElementById('semiFin42').innerHTML=semiiChoice;
-  document.getElementById('semiFin43').innerHTML=semiiChoice;
-  document.getElementById('semiFin44').innerHTML=semiiChoice;
-  document.getElementById('semiFin45').innerHTML=semiiChoice;
-  document.getElementById('semiFin46').innerHTML=semiiChoice;
-  document.getElementById('semiFin47').innerHTML=semiiChoice;
-  document.getElementById('semiFin48').innerHTML=semiiChoice;
-  document.getElementById('semiFin49').innerHTML=semiiChoice;
-  document.getElementById('semiFin50').innerHTML=semiiChoice;
-  document.getElementById('semiFin51').innerHTML=semiiChoice;
-  document.getElementById('semiFin52').innerHTML=semiiChoice;
-  document.getElementById('semiFin53').innerHTML=semiiChoice;
-  document.getElementById('semiFin54').innerHTML=semiiChoice;
-  document.getElementById('semiFin55').innerHTML=semiiChoice;
-  document.getElementById('semiFin56').innerHTML=semiiChoice;
-  document.getElementById('semiFin57').innerHTML=semiiChoice;
-  document.getElementById('semiFin58').innerHTML=semiiChoice;
-  document.getElementById('semiFin59').innerHTML=semiiChoice;
-  document.getElementById('semiFin60').innerHTML=semiiChoice;
-  document.getElementById('semiFin61').innerHTML=semiiChoice;
-  document.getElementById('semiFin62').innerHTML=semiiChoice;
-  document.getElementById('semiFin63').innerHTML=semiiChoice;
-  document.getElementById('semiFin64').innerHTML=semiiChoice;
-  document.getElementById('semiFin65').innerHTML=semiiChoice;
-  document.getElementById('semiFin66').innerHTML=semiiChoice;
-  document.getElementById('semiFin67').innerHTML=semiiChoice;
-  document.getElementById('semiFin68').innerHTML=semiiChoice;
-  document.getElementById('semiFin69').innerHTML=semiiChoice;
-  document.getElementById('semiFin70').innerHTML=semiiChoice;
-  document.getElementById('semiFin71').innerHTML=semiiChoice;
-  document.getElementById('semiFin72').innerHTML=semiiChoice;
-  document.getElementById('semiFin73').innerHTML=semiiChoice;
-  document.getElementById('semiFin74').innerHTML=semiiChoice;
-  document.getElementById('semiFin75').innerHTML=semiiChoice;
-  document.getElementById('semiFin76').innerHTML=semiiChoice;
-  document.getElementById('semiFin77').innerHTML=semiiChoice;
-  document.getElementById('semiFin78').innerHTML=semiiChoice;
-  document.getElementById('semiFin79').innerHTML=semiiChoice;
-  document.getElementById('semiFin80').innerHTML=semiiChoice;
-  document.getElementById('semiFin81').innerHTML=semiiChoice;
-  document.getElementById('semiFin82').innerHTML=semiiChoice;
-  document.getElementById('semiFin83').innerHTML=semiiChoice;
-  document.getElementById('semiFin84').innerHTML=semiiChoice;
-  document.getElementById('semiFin85').innerHTML=semiiChoice;
-  document.getElementById('semiFin86').innerHTML=semiiChoice;
-  document.getElementById('semiFin87').innerHTML=semiiChoice;
-  document.getElementById('semiFin88').innerHTML=semiiChoice;
-  document.getElementById('semiFin89').innerHTML=semiiChoice;
-  document.getElementById('semiFin90').innerHTML=semiiChoice;
-  document.getElementById('semiFin91').innerHTML=semiiChoice;
-  document.getElementById('semiFin92').innerHTML=semiiChoice;
-  document.getElementById('semiFin93').innerHTML=semiiChoice;
-  document.getElementById('semiFin94').innerHTML=semiiChoice;
-  document.getElementById('semiFin95').innerHTML=semiiChoice;
-  document.getElementById('semiFin96').innerHTML=semiiChoice;
-  document.getElementById('semiFin97').innerHTML=semiiChoice;
-  document.getElementById('semiFin98').innerHTML=semiiChoice;
-  document.getElementById('semiFin99').innerHTML=semiiChoice;
-  document.getElementById('semiFin100').innerHTML=semiiChoice;
-  document.getElementById('semiFin101').innerHTML=semiiChoice;
-  document.getElementById('semiFin102').innerHTML=semiiChoice;
-  document.getElementById('semiFin103').innerHTML=semiiChoice;
-  document.getElementById('semiFin104').innerHTML=semiiChoice;
-  document.getElementById('semiFin105').innerHTML=semiiChoice;
-  document.getElementById('semiFin106').innerHTML=semiiChoice;
-  document.getElementById('semiFin107').innerHTML=semiiChoice;
-  document.getElementById('semiFin108').innerHTML=semiiChoice;
-  document.getElementById('semiFin109').innerHTML=semiiChoice;
-  document.getElementById('semiFin110').innerHTML=semiiChoice;
-  document.getElementById('semiFin111').innerHTML=semiiChoice;
-  document.getElementById('semiFin112').innerHTML=semiiChoice;
-  document.getElementById('semiFin113').innerHTML=semiiChoice;
-  document.getElementById('semiFin114').innerHTML=semiiChoice;
-  document.getElementById('semiFin115').innerHTML=semiiChoice;
-  document.getElementById('semiFin116').innerHTML=semiiChoice;
-  document.getElementById('semiFin117').innerHTML=semiiChoice;
-  document.getElementById('semiFin118').innerHTML=semiiChoice;
-  document.getElementById('semiFin119').innerHTML=semiiChoice;
-  document.getElementById('semiFin120').innerHTML=semiiChoice;
-  document.getElementById('semiFin121').innerHTML=semiiChoice;
-  document.getElementById('semiFin122').innerHTML=semiiChoice;
-  document.getElementById('semiFin123').innerHTML=semiiChoice;
-  document.getElementById('semiFin124').innerHTML=semiiChoice;
-  document.getElementById('semiFin125').innerHTML=semiiChoice;
-  document.getElementById('semiFin126').innerHTML=semiiChoice;
-  document.getElementById('semiFin127').innerHTML=semiiChoice;
-  document.getElementById('semiFin128').innerHTML=semiiChoice;
-  document.getElementById('semiFin129').innerHTML=semiiChoice;
-  document.getElementById('semiFin130').innerHTML=semiiChoice;
-  document.getElementById('semiFin131').innerHTML=semiiChoice;
-  document.getElementById('semiFin132').innerHTML=semiiChoice;
-  document.getElementById('semiFin133').innerHTML=semiiChoice;
-  document.getElementById('semiFin134').innerHTML=semiiChoice;
-  document.getElementById('semiFin135').innerHTML=semiiChoice;
-  document.getElementById('semiFin136').innerHTML=semiiChoice;
-  document.getElementById('semiFin137').innerHTML=semiiChoice;
-  document.getElementById('semiFin138').innerHTML=semiiChoice;
-  document.getElementById('semiFin139').innerHTML=semiiChoice;
-  document.getElementById('semiFin140').innerHTML=semiiChoice;
-  document.getElementById('semiFin141').innerHTML=semiiChoice;
-  document.getElementById('semiFin142').innerHTML=semiiChoice;
-  document.getElementById('semiFin143').innerHTML=semiiChoice;
-  document.getElementById('semiFin144').innerHTML=semiiChoice;
-  document.getElementById('semiFin145').innerHTML=semiiChoice;
-  document.getElementById('semiFin146').innerHTML=semiiChoice;
-  document.getElementById('semiFin147').innerHTML=semiiChoice;
-  document.getElementById('semiFin148').innerHTML=semiiChoice;
-  document.getElementById('semiFin149').innerHTML=semiiChoice;
-  document.getElementById('semiFin150').innerHTML=semiiChoice;
-  document.getElementById('semiFin151').innerHTML=semiiChoice;
-  document.getElementById('semiFin152').innerHTML=semiiChoice;
-  document.getElementById('semiFin153').innerHTML=semiiChoice;
-  document.getElementById('semiFin154').innerHTML=semiiChoice;
+  console.log(semiColonChoice);
+
+  for (var i = 0; i < blocks.length; i++) {
+    document.getElementById(blocks[i]).innerHTML = semiColonChoice;
+  }
 }
