@@ -1,15 +1,19 @@
 <html>
+
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8" />
         <title>Un tableau de couleurs légendé</title> <!-- on définit le tire de la fenêtre-->
-        <meta name="author" content="Henry Letellier"/> <!-- on définit l'auteur de la page-->
-        <link rel="sortcut icon" type="image/x-icon" href="https://lh3.google.com/u/9/d/1r7Fyiv_afIhZiI8m4p8XAP1UTTbN0JrI=w1920-h937-iv1"/>
-        <meta name="description" content="Voici un tableau de couleurs contenant toute les options de couleurs que me proposaient mon éditeur de code."/> <!-- on décrit ce que contiendra le contenu de la page-->
-        <link rel="stylesheet" href="./css/stylesheet.css"/>
+        <meta name="author" content="Henry Letellier" /> <!-- on définit l'auteur de la page-->
+        <link rel="sortcut icon" type="image/x-icon" href="https://lh3.google.com/u/9/d/1r7Fyiv_afIhZiI8m4p8XAP1UTTbN0JrI=w1920-h937-iv1" />
+        <meta name="description" content="Voici un tableau de couleurs contenant toute les options de couleurs que me proposaient mon éditeur de code." /> <!-- on décrit ce que contiendra le contenu de la page-->
+        <link rel="stylesheet" href="./css/stylesheet.css" />
         <script src="./js/script.js"></script>
     </head>
+
     <body>
-        <p><h4>Avec ce menu vous pouvez changer la balise qui précède les couleures du tableau:</h4></p>
+        <p>
+        <h4>Avec ce menu vous pouvez changer la balise qui précède les couleures du tableau:</h4>
+        </p>
         <div class="choice">
             <div class="ppvx_dropdown">
                 <select id="baliseColor" class="ppvx_dropdown__control" onchange="col();">
@@ -54,7 +58,7 @@
 
             <div class="ppvx_dropdown">
                 <select id="semi" class="ppvx_dropdown__control" onchange="semii()">
-                    <option value="nothing">"   "</option>
+                    <option value="nothing">" "</option>
                     <option value="semi">;</option>
                 </select>
             </div>
@@ -62,12 +66,12 @@
         <table class="colortable" class="auto_resize">
             <thead>
                 <tr>
-                    <caption class="caaption"><b>HTML and CSS colours</b></caption>                  
+                    <caption class="caaption"><b>HTML and CSS colours</b></caption>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:#e83737;" class="colorcell"></td>
                     <td style="background-color:#ff4444;" class="colorcell"></td>
                     <td style="background-color:aliceblue;" class="colorcell"></td>
@@ -79,7 +83,7 @@
                     <td style="background-color:bisque;" class="colorcell"></td>
                     <td style="background-color:black;" class="color_black"></td>
                     <td style="background-color:blanchedalmond;" class="colorcell"></td>
-                    
+
                 </tr>
                 <tr>
                     <th class="colortitle">Their id text/rgb/rgba/<span style="color:#FFFFFF;">#FFFFFF</span></th>
@@ -94,11 +98,11 @@
                     <td id="tdcol" class="color_bisque"><span id="baliseColorFin9">...</span>bisque<span id="semiFin9">...</span></td>
                     <td id="tdcol" class="color_black"><span id="baliseColorFin10">...</span>black<span id="semiFin10">...</span></td>
                     <td id="tdcol" class="color_blanchedalmond"><span id="baliseColorFin11">...</span>blanchedalmond<span id="semiFin11">...</span></td>
-                    
+
                 </tr>
                 <!-- 1 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:blue;" class="colorcell"></td>
                     <td style="background-color:blueviolet;" class="colorcell"></td>
                     <td style="background-color:brown;" class="colorcell"></td>
@@ -127,7 +131,7 @@
                 </tr>
                 <!-- 2 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:cyan;" class="colorcell"></td>
                     <td style="background-color:darkblue;" class="colorcell"></td>
                     <td style="background-color:darkcyan;" class="colorcell"></td>
@@ -156,7 +160,7 @@
                 </tr>
                 <!-- 3 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:darksalmon;" class="colorcell"></td>
                     <td style="background-color:darkseagreen;" class="colorcell"></td>
                     <td style="background-color:darkslateblue;" class="colorcell"></td>
@@ -185,7 +189,7 @@
                 </tr>
                 <!-- 4 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:dodgerblue;" class="colorcell"></td>
                     <td style="background-color:firebrick;" class="colorcell"></td>
                     <td style="background-color:floralwhite;" class="colorcell"></td>
@@ -214,7 +218,7 @@
                 </tr>
                 <!-- 5 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:greenyellow;" class="colorcell"></td>
                     <td style="background-color:grey;" class="colorcell"></td>
                     <td style="background-color:honeydew;" class="colorcell"></td>
@@ -243,7 +247,7 @@
                 </tr>
                 <!-- 6 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:lemonchiffon;" class="colorcell"></td>
                     <td style="background-color:lightblue;" class="colorcell"></td>
                     <td style="background-color:lightcoral;" class="colorcell"></td>
@@ -272,7 +276,7 @@
                 </tr>
                 <!-- 7 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:lightskyblue;" class="colorcell"></td>
                     <td style="background-color:lightslategray;" class="colorcell"></td>
                     <td style="background-color:lightslategrey;" class="colorcell"></td>
@@ -301,7 +305,7 @@
                 </tr>
                 <!-- 8 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:mediumblue;" class="colorcell"></td>
                     <td style="background-color:mediumorchid;" class="colorcell"></td>
                     <td style="background-color:mediumpurple;" class="colorcell"></td>
@@ -330,7 +334,7 @@
                 </tr>
                 <!-- 9 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:moccasin;" class="colorcell"></td>
                     <td style="background-color:navy;" class="colorcell"></td>
                     <td style="background-color:oldlace;" class="colorcell"></td>
@@ -344,7 +348,7 @@
                     <td style="background-color:paleturquoise;" class="colorcell"></td>
                 </tr>
                 <tr>
-                    
+
                     <th class="colortitle">Their id text/rgb/rgba/<span style="color:#FFFFFF;">#FFFFFF</span></th>
                     <td id="tdcol" class="color_moccasin"><span id="baliseColorFin101">...</span>moccasin<span id="semiFin101">...</span></td>
                     <td id="tdcol" class="color_navy"><span id="baliseColorFin102">...</span>navy<span id="semiFin102">...</span></td>
@@ -360,7 +364,7 @@
                 </tr>
                 <!-- 10 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:palevioletred;" class="colorcell"></td>
                     <td style="background-color:papayawhip;" class="colorcell"></td>
                     <td style="background-color:peachpuff;" class="colorcell"></td>
@@ -374,7 +378,7 @@
                     <td style="background-color:rgb(181, 90, 226);" class="colorcell"></td>
                 </tr>
                 <tr>
-                    
+
                     <th class="colortitle">Their id text/rgb/rgba/<span style="color:#FFFFFF;">#FFFFFF</span></th>
                     <td id="tdcol" class="color_palevioletred"><span id="baliseColorFin112">...</span>palevioletred<span id="semiFin112">...</span></td>
                     <td id="tdcol" class="color_papayawhip"><span id="baliseColorFin113">...</span>papayawhip<span id="semiFin113">...</span></td>
@@ -390,7 +394,7 @@
                 </tr>
                 <!-- 11 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:rgba(0, 173, 255, 0.42);" class="colorcell"></td>
                     <td style="background-color:rosybrown;" class="colorcell"></td>
                     <td style="background-color:royalblue;" class="colorcell"></td>
@@ -404,7 +408,7 @@
                     <td style="background-color:skyblue;" class="colorcell"></td>
                 </tr>
                 <tr>
-                    
+
                     <th class="colortitle">Their id text/rgb/rgba/<span style="color:#FFFFFF;">#FFFFFF</span></th>
                     <td id="tdcol" class="color_rgba_0_173_255_0_42"><span id="baliseColorFin123">...</span>rgba(0, 173, 255, 0.42)<span id="semiFin123">...</span></td> <!-- Le a de rgba est pour adapter latransparance, la transparance se nome alpha, donc le a tient pour alpha, c'est le quatrième numéro de la liste-->
                     <td id="tdcol" class="color_rosybrown"><span id="baliseColorFin124">...</span>rosybrown<span id="semiFin124">...</span></td>
@@ -420,7 +424,7 @@
                 </tr>
                 <!-- 12 -->
                 <tr>
-                    <th  class="colortitle">The colours</th>
+                    <th class="colortitle">The colours</th>
                     <td style="background-color:slateblue;" class="colorcell"></td>
                     <td style="background-color:slategray;" class="colorcell"></td>
                     <td style="background-color:slategrey;" class="colorcell"></td>
@@ -449,33 +453,34 @@
                 </tr>
                 <!-- 13 -->
                 <tr>
-                  <th  class="colortitle">The colours</th>
-                  <td style="background-color:violet;" class="colorcell"></td>
-                  <td style="background-color:wheat;" class="colorcell"></td>
-                  <td style="background-color:white;" class="colorcell"></td>
-                  <td style="background-color:whitesmoke;" class="colorcell"></td>
-                  <td style="background-color:yellow;" class="colorcell"></td>
-                  <td style="background-color:yellowgreen;" class="colorcell"></td>
-                  <td style="background-color:rgb(239, 255, 196);" class="colorcell"></td>
-                  <td style="background-color:rgb(215, 255, 205);" class="colorcell"></td>
-                  <td style="background-color: #f28C8C;" class="colorcell"></td>
-                  <td style="background-color:forestgreen;" class="colorcell"></td>
+                    <th class="colortitle">The colours</th>
+                    <td style="background-color:violet;" class="colorcell"></td>
+                    <td style="background-color:wheat;" class="colorcell"></td>
+                    <td style="background-color:white;" class="colorcell"></td>
+                    <td style="background-color:whitesmoke;" class="colorcell"></td>
+                    <td style="background-color:yellow;" class="colorcell"></td>
+                    <td style="background-color:yellowgreen;" class="colorcell"></td>
+                    <td style="background-color:rgb(239, 255, 196);" class="colorcell"></td>
+                    <td style="background-color:rgb(215, 255, 205);" class="colorcell"></td>
+                    <td style="background-color: #f28C8C;" class="colorcell"></td>
+                    <td style="background-color:forestgreen;" class="colorcell"></td>
                 </tr>
                 <tr>
-                  <th class="colortitle">Their id text/rgb/rgba/<span style="color:#FFFFFF;">#FFFFFF</span></th>
-                  <td id="tdcol" class="color_violet"><span id="baliseColorFin145">...</span>violet<span id="semiFin145">...</span></td>
-                  <td id="tdcol" class="color_wheat"><span id="baliseColorFin146">...</span>wheat<span id="semiFin146">...</span></td>
-                  <td id="tdcol" class="color_white"><span id="baliseColorFin147">...</span>white<span id="semiFin147">...</span></td>
-                  <td id="tdcol" class="color_whitesmoke"><span id="baliseColorFin148">...</span>whitesmoke<span id="semiFin148">...</span></td>
-                  <td id="tdcol" class="color_yellow"><span id="baliseColorFin149">...</span>yellow<span id="semiFin149">...</span></td>
-                  <td id="tdcol" class="color_yellowgreen"><span id="baliseColorFin150">...</span>yellowgreen<span id="semiFin150">...</span></td>
-                  <td id="tdcol" class="color_rgb239_255_196"><span id="baliseColorFin151">...</span>rgb(239, 255, 196)<span id="semiFin151">...</span></td>
-                  <td id="tdcol" class="color_rgb215_255_205"><span id="baliseColorFin152">...</span>rgb(215, 255, 205)<span id="semiFin152">...</span></td>
-                  <td id="tdcol" class="color_f28C8C"><span id="baliseColorFin153">...</span>#f28C8C<span id="semiFin153">...</span></td>
-                  <td id="tdcol" class="color_forestgreen"><a  href="https://codepen.io/henry-letellier/full/wvKepmR" style="text-decoration:none;cursor:text;color:forestgreen;" target="_blank" rel="noreferrer" rel="noopener"><span id="baliseColorFin23">...</span><span style="font-size:xx-small;">&copy; Created by Henry Letellier</span><span id="semiFin23">...</span></a></td>
+                    <th class="colortitle">Their id text/rgb/rgba/<span style="color:#FFFFFF;">#FFFFFF</span></th>
+                    <td id="tdcol" class="color_violet"><span id="baliseColorFin145">...</span>violet<span id="semiFin145">...</span></td>
+                    <td id="tdcol" class="color_wheat"><span id="baliseColorFin146">...</span>wheat<span id="semiFin146">...</span></td>
+                    <td id="tdcol" class="color_white"><span id="baliseColorFin147">...</span>white<span id="semiFin147">...</span></td>
+                    <td id="tdcol" class="color_whitesmoke"><span id="baliseColorFin148">...</span>whitesmoke<span id="semiFin148">...</span></td>
+                    <td id="tdcol" class="color_yellow"><span id="baliseColorFin149">...</span>yellow<span id="semiFin149">...</span></td>
+                    <td id="tdcol" class="color_yellowgreen"><span id="baliseColorFin150">...</span>yellowgreen<span id="semiFin150">...</span></td>
+                    <td id="tdcol" class="color_rgb239_255_196"><span id="baliseColorFin151">...</span>rgb(239, 255, 196)<span id="semiFin151">...</span></td>
+                    <td id="tdcol" class="color_rgb215_255_205"><span id="baliseColorFin152">...</span>rgb(215, 255, 205)<span id="semiFin152">...</span></td>
+                    <td id="tdcol" class="color_f28C8C"><span id="baliseColorFin153">...</span>#f28C8C<span id="semiFin153">...</span></td>
+                    <td id="tdcol" class="color_forestgreen"><a href="https://codepen.io/henry-letellier/full/wvKepmR" style="text-decoration:none;cursor:text;color:forestgreen;" target="_blank" rel="noreferrer" rel="noopener"><span id="baliseColorFin23">...</span><span style="font-size:xx-small;">&copy; Created by Henry Letellier</span><span id="semiFin23">...</span></a></td>
                 </tr><!-- <td style="background-" class="colorcell"></td></td> -->
             </tbody>
-        </table>   
-        <p><a class="a" href="https://codepen.io/henry-letellier/full/wvKepmR" style="text-decoration:none;cursor:pointer;" target="_blank" rel="noreferrer" rel="noopener"><span id="tag" width="30" height="30"> &copy; Created by Henry Letellier <img id="tagImg" src="https://lh3.google.com/u/9/d/1r7Fyiv_afIhZiI8m4p8XAP1UTTbN0JrI=w1920-h937-iv1"/><span id="dot">.</span></span></a></p>
-  </body>
-</html><!--Je vous coneille d'avoire une icone en 16x16 pixels-->
+        </table>
+        <p><a class="a" href="https://codepen.io/henry-letellier/full/wvKepmR" style="text-decoration:none;cursor:pointer;" target="_blank" rel="noreferrer" rel="noopener"><span id="tag" width="30" height="30"> &copy; Created by Henry Letellier <img id="tagImg" src="./img/favicon.png" /><span id="dot">.</span></span></a></p>
+    </body>
+
+</html><!--Je vous conseille d'avoire une icone en 16x16 pixels-->
